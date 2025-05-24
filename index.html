@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Royal Café - Order System</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header>Café the Moon</header>
+
+<!-- Landing Section -->
+<section class="landing section" id="landing-section">
+ <h1><u>Café the Moon</u></h1>
+
+  <p>Delicious food, just a click away.</p>
+  <button id="startOrderBtn">Order Food</button>
+</section>
+
+<!-- Gallery Section -->
+ <section>
+<section class="gallery" id="gallery">
+  <h2>Our Café Moments</h2>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="https://i0.wp.com/helloimfrecelynne.com/wp-content/uploads/2023/09/Photo-by-Yani-Cafe-in-Pasig.jpg?fit=960%2C960&ssl=1" alt="Cafe 1" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://assets-metrostyle.abs-cbn.com/prod/metrostyle/attachments/1cf43760-b477-419e-b5cc-fa0e78e7bef8_cafe%201911.jpg" alt="Cafe 2" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://newz24india.in/wp-content/uploads/2025/04/coffee-cafe.jpg" alt="Cafe 3" />
+    </div>
+  </div>
+  <br><br>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="https://i.pinimg.com/474x/bb/44/75/bb447558662beebb3691879e9fe1d72a.jpg" alt="Cafe 4" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://thumbs.dreamstime.com/b/coffee-break-meeting-work-cafe-people-discussing-375405766.jpg" alt="Cafe 5" />
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1564759224907-65b945ff0e84?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmFtaWx5JTIwZWF0aW5nfGVufDB8fDB8fHww" alt="Cafe 6" />
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- Food Section -->
+<section id="food-section" class="section" style="display:none;">
+  <h2 style="text-align:center; color:#b7410e;">Choose Your Food</h2>
+  
+  <div id="categories" class="categories" aria-label="Food Categories">
+    <!-- Categories will be dynamically inserted here -->
+  </div>
+
+  <div id="food-items" class="food-items" style="display:none;" aria-label="Food Items">
+    <!-- Food items dynamically inserted here -->
+  </div>
+  
+  <button id="backToCategories" style="display:none;">Back to Categories</button>
+
+  <h3 style="margin-top:40px; color:#b7410e;">Your Order Summary:</h3>
+  <pre id="order-summary">No items selected yet.</pre>
+
+  <button id="placeOrderBtn" style="display:none; margin-top:20px;">Place Order</button>
+</section>
+
+<!-- Modal Confirmation -->
+<div class="modal" id="confirmationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal-content">
+    <h2 id="modalTitle">Confirm Your Order</h2>
+    <pre id="modalOrderDetails" style="text-align:left; background:#fff3e0; padding:10px; border-radius:8px; max-height: 300px; overflow-y:auto;"></pre>
+    <div class="modal-buttons">
+      <button id="confirmOrderBtn">Confirm</button>
+      <button id="cancelOrderBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+
+
+  
+<footer>
+  <div class="footer-container">
+    <h3> Café the Moon</h3>
+    <p>Contact: 
+      <a href="mailto:royalcafe@example.com" class="contact">CafétheMoon@gmail.com</a> | 
+      <a href="tel:+919876543210" class="contact">+91-6356860827</a>
+      <p><a href="https://omchauhan-code.github.io/cafe-website/" class="contact">Visit Our Website</a></p>
+    </p>
+    
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p class="copyright">&copy; 2025 Café the Moon. All rights reserved.</p>
+  </div>
+</footer>
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #FFFDD0;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: #b7410e;
+    color: #FFFDD0;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  nav {
+    background: #d15c1f;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 30px;
+  }
+  button {
+    background: #b7410e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #a63708;
+  }
+  .section {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  /* Landing Section */
+  .landing {
+    width: 100%;
+    min-height: calc(90vh - 90px);
+    background: url('https://img.freepik.com/premium-photo/coffee-shop-blur-drink-cup-cafe-hot-coffee-espresso-beverage-latte-table-cappuccino-white-caffeine-shop-background_184808-1298.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #FFFDD0;
+    box-shadow: inset 0 0 0 2000px rgba(103, 103, 103, 0.5);
+  }
+  .landing h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px #000000a9;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+  }
+ 
+  .landing p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px #000;
+  }
+  /* Gallery Section */
+  .gallery {
+    background-color: #FFFDD0;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #b7410e;
+  }
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .gallery-item {
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+  }
+  .gallery-item:hover {
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+  }
+  .gallery-item:hover img {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  /* Categories and Food */
+  .categories, .food-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .category, .food-item {
+    background: #b7410e;
+    color: #FFFDD0;
+    box-shadow: 0 4px 10px rgba(183, 65, 14, 0.2);
+    border-radius: 12px;
+    flex: 1 1 150px;
+    max-width: 180px;
+    cursor: pointer;
+    padding: 15px 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  .category:hover, .food-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 18px rgba(183, 65, 14, 0.45);
+  }
+  .food-item img {
+    max-width: 100%;
+    border-radius: 12px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  input[type=number] {
+    width: 60px;
+    padding: 6px 8px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    text-align: center;
+    margin-top: 5px;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  #order-summary {
+    white-space: pre-wrap;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-family: monospace;
+    font-size: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 1000;
+  }
+  .modal.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal-content {
+    background: white;
+    padding: 25px 30px;
+    max-width: 480px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(183,65,14,0.5);
+    text-align: center;
+  }
+  .modal-buttons {
+    margin-top: 25px;
+  }
+  .modal-buttons button {
+    margin: 0 12px;
+    min-width: 100px;
+  }
+  /* Back button */
+  #backToCategories {
+    background: #d15c1f;
+    margin: 25px auto 0 auto;
+    display: block;
+    font-weight: bold;
+  }
+  #backToCategories:hover {
+    background: #b7410e;
+  }
+
+  /*footer */
+  footer {
+  background-color: #b7410e;
+  color: #eee;
+  padding: 10px 10px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 700px;
+  margin: 0 auto;
+  
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #FFFDD0; /* red accent */
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+
+.social-icons {
+  margin: 15px 0;
+}
+
+.social-icons a {
+  color: #eee;
+  margin: 0 12px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff3b3f;
+}
+
+footer .copyright {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.contact{
+    color: whitesmoke;
+}
+
+
